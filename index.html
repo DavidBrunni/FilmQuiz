@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/FilmQuiz/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Denna quiz är en del av Ephraim, Marie, Ridwaan och Davids grupparbete. Här kommer besökarna få svara på frågor inom kategorin film."
+        />
+        <meta name="keywords" content="quiz, filmquiz, film" />
+        <meta name="author" content="Blå Kongo Team" />
+        <title>Blå Kongos filmquiz</title>
+      <script type="module" crossorigin src="/FilmQuiz/assets/index-ChPAEoTe.js"></script>
+      <link rel="stylesheet" crossorigin href="/FilmQuiz/assets/index-O2IqAQFz.css">
+    </head>
+    <body>
+        <header>
+            <h1>Blå Kongos filmquiz</h1>
+            <p>
+                Hej och välkommen till vårt quiz! Här kan du testa dina
+                kunskaper inom film, lycka till!
+            </p>
+        </header>
+
+        <main>
+            <section id="start-screen" class="start-screen">
+                <h2>Välkommen till Blå Kongo Quiz!</h2>
+                <button id="start-button" class="start-button">
+                    Starta Quiz
+                </button>
+            </section>
+
+            <section id="quiz-section" class="hidden">
+                <div id="timer" class="timer">00:00</div>
+                <div class="questions">
+                    <div id="question"></div>
+                    <div id="result" class="result" class="hidden"></div>
+                </div>
+                <div id="restart-container"></div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="pict-1">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAxJJREFUeF7tnMFtVDEURW+KIPQAEg2EBWyQWNAA0EEE1AILKoAWQKxgQwEs6QBEEQSHiRDDMPd94ht/M2ekWT3r2j7H7+drpPhIfIYSOBo6O5MLAYMPAQIQMJjA4OnpAAQMJjB4ejoAAYMJDJ6eDkDAYAKDp6cDEDCYwODp6QAEDCYweHo6YEIBJ5IeS7q1+T6Q9GHBPt7/GH9nz/i7K8/bXvpXSZ8kfZb0dvMt41jaAU8lPd9Kb/AbtOqnwW8S/vZZe57b5+vNAXXjzutLBHyf+NT27qoK3BLb0iBJryQ9mvjU9u6qioBnkl64gRUB9yW9cUGbx9Ah/y3Yhei2pI/72FUENItPCgJ6n7K15xWQ6KWk08sKeCfpXmU2uuAPSvYQVTrgi6TrRQF2wq2c//2N6Juk48t2wL63n13Zvd841p7nzubeQ17pgKUC6ILflVy5gDb92k9t7/X981Mm0QFtMXTBLyVDOoAuWIEAuuCnhGEdQBesQABdMLgD3DvyIdSHPoIOAbDbIwIcoXAdAWHALh4BjlC4joAwYBePAEcoXEdAGLCLjwuo/KDnFjlz3f1cj4CwXQSEAbt4BDhC4ToCwoBdPAIcoXAdAWHALh4BjlC4joAwYBePAEcoXEdAGLCLR4AjFK4jIAzYxSPAEQrXERAG7OIR4AiF6wgIA3bxCHCEwnUEhAG7eAQ4QuE6AsKAXTwCHKFwHQFhwC4eAY5QuI6AMGAXjwBHKFxHQBiwi0eAIxSuIyAM2MUjwBEK1xEQBuziEeAIhetxAUsubArvdbr4Lhc2LbmybDpC4QXbmwIq/91SvbQvvJcp47tc2le9tnJKQuFFd7m2sq3RXdwa3seU8d0ubr3YvftrPyWl4KIrj/dFd0e3te66vDu4hymjY5d3X9Bo19c/lHRD0k1J16bE1G/RV3p9fb9lk3ROoPScglWOAAJybEvJCChhyg1CQI5tKRkBJUy5QQjIsS0lI6CEKTcIATm2pWQElDDlBiEgx7aUjIASptwgBOTYlpIRUMKUG4SAHNtSMgJKmHKDzgDnOdRhdDMO6QAAAABJRU5ErkJggg=="
+                    width="96"
+                    height="96"
+                    alt="Film Icon"
+                    loading="lazy"
+                />
+            </div>
+            <div class="pict-2">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAxJJREFUeF7tnMFtVDEURW+KIPQAEg2EBWyQWNAA0EEE1AILKoAWQKxgQwEs6QBEEQSHiRDDMPd94ht/M2ekWT3r2j7H7+drpPhIfIYSOBo6O5MLAYMPAQIQMJjA4OnpAAQMJjB4ejoAAYMJDJ6eDkDAYAKDp6cDEDCYwODp6QAEDCYweHo6YEIBJ5IeS7q1+T6Q9GHBPt7/GH9nz/i7K8/bXvpXSZ8kfZb0dvMt41jaAU8lPd9Kb/AbtOqnwW8S/vZZe57b5+vNAXXjzutLBHyf+NT27qoK3BLb0iBJryQ9mvjU9u6qioBnkl64gRUB9yW9cUGbx9Ah/y3Yhei2pI/72FUENItPCgJ6n7K15xWQ6KWk08sKeCfpXmU2uuAPSvYQVTrgi6TrRQF2wq2c//2N6Juk48t2wL63n13Zvd841p7nzubeQ17pgKUC6ILflVy5gDb92k9t7/X981Mm0QFtMXTBLyVDOoAuWIEAuuCnhGEdQBesQABdMLgD3DvyIdSHPoIOAbDbIwIcoXAdAWHALh4BjlC4joAwYBePAEcoXEdAGLCLjwuo/KDnFjlz3f1cj4CwXQSEAbt4BDhC4ToCwoBdPAIcoXAdAWHALh4BjlC4joAwYBePAEcoXEdAGLCLR4AjFK4jIAzYxSPAEQrXERAG7OIR4AiF6wgIA3bxCHCEwnUEhAG7eAQ4QuE6AsKAXTwCHKFwHQFhwC4eAY5QuI6AMGAXjwBHKFxHQBiwi0eAIxSuIyAM2MUjwBEK1xEQBuziEeAIhetxAUsubArvdbr4Lhc2LbmybDpC4QXbmwIq/91SvbQvvJcp47tc2le9tnJKQuFFd7m2sq3RXdwa3seU8d0ubr3YvftrPyWl4KIrj/dFd0e3te66vDu4hymjY5d3X9Bo19c/lHRD0k1J16bE1G/RV3p9fb9lk3ROoPScglWOAAJybEvJCChhyg1CQI5tKRkBJUy5QQjIsS0lI6CEKTcIATm2pWQElDDlBiEgx7aUjIASptwgBOTYlpIRUMKUG4SAHNtSMgJKmHKDzgDnOdRhdDMO6QAAAABJRU5ErkJggg=="
+                    width="96"
+                    height="96"
+                    alt="Film Icon"
+                    loading="lazy"
+                />
+            </div>
+        </footer>
+
+        <!-- Din TypeScript-fil som kompileras till JavaScript via Vite -->
+    </body>
+</html>
